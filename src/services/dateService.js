@@ -6,8 +6,11 @@ const getCurrentDate = () => {
     date.getMonth(),
     date.getDate(),
   ];
-  // Log to console
-  return `${year}-${month + 1}-${day}`;
+  
+  const formatMonth = month < 10 ? `0${month}` : month;
+  const formatDay = day < 10 ? `0${day}` : day;
+
+  return `${year}-${formatMonth}-${formatDay}`;
 };
 
 module.exports = {
